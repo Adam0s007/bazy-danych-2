@@ -1,0 +1,104 @@
+#train-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  padding: 20px 10px;
+  background-color: white;
+}
+
+#train-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px;
+  height: 20%;
+  border: 1px solid black;
+}
+
+#seats-zone {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  background-color: rgba(100, 149, 237, 0.18);
+}
+
+#train-info, #seats-zone {
+  border: 1px solid black;
+  border-radius: 7px;
+  margin: 3px 0;
+  padding: 10px;
+  background-color: whitesmoke;
+}
+
+#seats-zone #summary {
+  display: flex;
+  height: 10%;
+  flex-direction: column;
+}
+
+#seats-zone #seat-details-container {
+  height: 30%;
+  width: 100%;
+}
+
+#seats-zone #seat-details-container #seat-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #bdbcbc;
+  border-radius: 17px;
+  height: 90%;
+  width: 100%;
+}
+
+#seats-zone #train-map {
+  margin-top: 6px;
+  padding: 20px;
+  height: 55%;
+  border: 1px solid black;
+  border-radius: 1px;
+
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+}
+
+
+#seats-zone #train-map .seat-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+  border-radius: 6px;
+  /*background-color: black;*/
+  /*color: white;*/
+  opacity: 75%;
+}
+
+#seats-zone #train-map .seat-info:hover {
+  cursor: pointer;
+  font-weight: bold;
+  opacity: 100%;
+}
+
+#go-back-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  width: 120px;
+  height: 40px;
+  border: 1px solid black;
+}
+
+#go-back-button:hover {
+  cursor: pointer;
+  border: 1px solid white;
+}

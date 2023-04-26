@@ -1,0 +1,16 @@
+<div id="available-trains">
+
+  <div *ngIf="trains.length == 0">
+    <p>Train list empty</p>
+  </div>
+
+  <div class="train-box" *ngFor="let t of trains">
+    {{t.name}}
+    {{t._id}}
+    <button class="button" (click)="sendData(t)">SEE DETAILS</button>
+  </div>
+  <div class="train-box">
+    <button class="button" disabled>ADD TRAIN</button>
+  </div>
+
+</div>

@@ -1,0 +1,27 @@
+#top {
+  height: 9%;
+  background-color: palegoldenrod;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  height: 91%;
+  width: 100%;
+}
+
+#train-pick {
+  height: 100%;
+  width: 20%;
+}
+
+#router {
+  height: 100%;
+  width: 80%;
+}

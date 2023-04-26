@@ -1,0 +1,24 @@
+<div id="seat-details-c">
+  <div id="left">
+    SEAT {{seat_id}}
+    <br/>
+    DETAILS
+  </div>
+
+  <div id="right">
+    <button class="button" (click)="closeButtonHandler()">close seat-details</button>
+
+    <ng-container *ngIf="free != 1 && reservationDetails">
+      User full name: {{reservationDetails.full_name}}
+      <br/>
+      Timestamp: {{reservationDetails.reservation_time}}
+      <button class="button button-red" (click)="deleteReservation()">delete reservation</button>
+    </ng-container>
+
+    <ng-container *ngIf="free == 1">
+      <input type="text" placeholder="Full name" value="Name" [(ngModel)]="user_full_name">
+      <button (click)="makeReservation(user_full_name)">BUY</button>
+    </ng-container>
+
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div id="top">
+  <div style="display: flex; align-items: center; ">
+    <div style="font-weight: bold; font-size: 30px; padding: 0 10px">System rezerwacji biletów </div>
+    <div>[bazy danych 2]</div>
+  </div>
+</div>
+
+<div id="container">
+  <div id="train-pick">
+    <app-available-trains (dataEvent)="seeDetails($event)"></app-available-trains>
+  </div>
+  <div id="router">
+    <app-train-details *ngIf="trainDetails" [train]="trainDetails"
+                       (closeComponentEVent)="trainDetails = undefined"></app-train-details>
+    <div *ngIf="!trainDetails">
+      <p>PICK THE TRAIN</p>
+    </div>
+  </div>
+</div>
+
