@@ -4,7 +4,7 @@
 | obszar | technologia |
 | ----------- | ----------- |
 | frontend | Angular |
-| backend | Django |
+| backend | FastApi |
 | baza danych | MongoDB |
 
 ## twórcy
