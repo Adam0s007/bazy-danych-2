@@ -26,19 +26,20 @@ export class SeatDetailsComponent implements OnChanges {
     if ('train' in changes || 'seat_id' in changes) {
       this.free = this.train.free_seats[this.seat_id];
       if (!this.free) {
-        this.trainsService.reservationDetails(this.train._id, this.seat_id).subscribe(value => {
-          console.log("RESERVATION-DETAILS")
-          console.log(value)
-          this.reservationDetails = value as Reservation;
-        });
+        this.trainsService.reservationDetails(this.train._id, this.seat_id)
+          .subscribe(value => {
+            console.log("RESERVATION-DETAILS")
+            console.log(value)
+            this.reservationDetails = value as Reservation;
+          });
       }
     }
   }
 
   async makeReservation(user_full_name: string) {
-    this.trainsService.buyTicket(user_full_name, this.train._id, this.seat_id);
-    await new Promise(f => setTimeout(f, 1000));
-    window.location.reload();
+    this.trainsService.buyTicket(12, this.train._id, this.seat_id);
+    // await new Promise(f => setTimeout(f, 1000));
+    // window.location.reload();
   }
 
   async deleteReservation() {
